@@ -1,6 +1,6 @@
 package com.onb.extrack
 
-class Role {
+class Role implements Serializable {
 
 	String authority
 
@@ -11,4 +11,9 @@ class Role {
 	static constraints = {
 		authority blank: false, unique: true
 	}
+
+    @Override
+    String toString() {
+        "$authority"
+    }
 }

@@ -11,9 +11,7 @@ class UserRole implements Serializable {
 		if (!(other instanceof UserRole)) {
 			return false
 		}
-
-		other.user?.id == user?.id &&
-			other.role?.id == role?.id
+		other.user?.id == user?.id && other.role?.id == role?.id
 	}
 
 	int hashCode() {
